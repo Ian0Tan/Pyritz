@@ -2,7 +2,6 @@ package pyritzgame;
 import java.awt.Color;
 
 import hsa_new.Console;
-import javafx.scene.text.Font;
 
 public class Pyritz {
 
