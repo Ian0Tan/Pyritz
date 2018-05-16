@@ -1,17 +1,31 @@
 package pyritzgame;
+import java.awt.Color;
+
 import hsa_new.Console;
+import javafx.scene.text.Font;
 
 public class Pyritz {
 
 	public static void main(String[] args) {
 		Console c = new Console( 30,100,20,"Pyritz");
+
 		int restart = 0;
-		c.print("To start, type start \n");
+		c.print("					Pyritz: The Game\n");
+		c.setTextColor(Color.WHITE);
+		c.print("				___");
+		c.setTextColor(Color.BLACK);
+		c.print("To start, type start below\n");
+		c.setTextColor(Color.WHITE);
+		c.print("\n					______");
+		c.setTextColor(Color.BLACK);
 		String start = c.readString();
 		if (start.equalsIgnoreCase("start")) {
 			restart = 1;
 		}
 		while (restart == 1){
+		c.setTextColor(Color.WHITE);
+		c.setTextBackgroundColor(Color.BLACK);
+		c.setBackground(Color.BLACK);
 		c.clear();
 		c.print("You are a pyrit on a ship sailing the sea, do you want to get up in the morning?\n(Yes or No)\n");
 		String input1 = c.readString();
