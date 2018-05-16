@@ -144,37 +144,38 @@ public class Pyritz {
 							c.print("The ships powder magazine explodes killing everyone");
 						}
 					}
-					else if (input1.equalsIgnoreCase("no")) {
-						c.clear();
-						input1 = "no";
-						int scream = 0;
-						int cry = 0;
-						c.print("You were abducted by allens, what do you do? \n");
-						while (scream < 1 || cry < 1) {
-							c.print("(Scream or cry) \n");
-							String input3 = c.readString();
-							if (input3.equalsIgnoreCase("scream")) {
-								c.clear();
-								c.print("The allens appear annoyed with your screaming... \n");
-								scream =+ 1;
-							}
-							else if (input3.equalsIgnoreCase("cry")) {
-								c.clear();
-								c.print("The allens watch as you continue to cry your eyes out. \n");
-								cry =+ 1;
-							}
-						}
-						c.clear();
-						c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
-						break;
-
-					}
+				
 
 				}
 				c.clear();
 				c.print("the oof-ening begins.");
 				break;
 			}
+			else if (input1.equalsIgnoreCase("no")) {
+				c.clear();
+				input1 = "no";
+				int scream = 0;
+				int cry = 0;
+					c.print("You were abducted by allens, what do you do? \n");
+					while (scream < 1 || cry < 1) {
+						c.print("(Scream or cry) \n");
+						String input3 = c.readString();
+						if (input3.equalsIgnoreCase("scream")) {
+							c.clear();
+							c.print("The allens appear annoyed with your screaming... \n");
+							scream =+ 1;
+						}
+						else if (input3.equalsIgnoreCase("cry")) {
+							c.clear();
+							c.print("The allens watch as you continue to cry your eyes out. \n");
+							cry =+ 1;
+						}
+					}
+					c.clear();
+					c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
+					break;
+
+				}
 		}
 	}
 }
