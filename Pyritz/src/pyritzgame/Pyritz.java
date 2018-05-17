@@ -23,6 +23,9 @@ public class Pyritz {
 		}
 		while (restart == 1){
 			c.clear();
+			c.fillRect (0, 0, 1500, 1500);
+			c.setTextBackgroundColour(Color.BLACK);
+			c.setTextColour(Color.WHITE);
 			c.print("You are a pyrit on a ship sailing the sea, do you want to get up in the morning?\n(Yes or No)\n");
 			String input1 = c.readString();
 			if (input1.equalsIgnoreCase("yes")) {
@@ -31,6 +34,7 @@ public class Pyritz {
 				String input2 = c.readString();
 				if(input2.equalsIgnoreCase("yes")) {
 					c.clear();
+					c.setTextColour(Color.RED);
 					c.print("You drink it all and die in a bar fight.");
 					restart = 0;
 				}
@@ -43,6 +47,7 @@ public class Pyritz {
 						c.print(rng1);
 						if (rng1 == 2.0) {
 							c.clear();
+							c.setTextColour(Color.RED);
 							c.print("You fall from the rigging and die.\nDon't drink and climb.");
 							restart = 0;
 						}
@@ -55,6 +60,7 @@ public class Pyritz {
 								double rng2 = Math.round(Math.random() * 3);
 								if (rng2 == 2.0) {
 									c.clear();
+									c.setTextColour(Color.RED);
 									c.print("The cannon goes off while loading.\nYou die instantly, your entire bloodline is disappointed.");
 									restart = 0;
 								}
@@ -67,6 +73,7 @@ public class Pyritz {
 							else if (input5.equalsIgnoreCase("no")) {
 								double rng3 = Math.round(Math.random() * 2);
 								if (rng3 == 2.0) {
+									c.setTextColour(Color.RED);
 									c.print("You weren't paying attention and got hit by an enemy cannon ball.\nYou die instantly.\nCannon ball: 1 - You: 0");
 									restart = 0;
 								}
@@ -125,38 +132,44 @@ public class Pyritz {
 							}
 							else {
 								c.clear();
-								c.print("you suruived, but your betrayal is not tolerated.\nYou are killed by your former friends");
+								c.print("you suruived, but your betrayal is not tolerated.\n");
+								c.setTextColour(Color.RED);
+								c.print("You are killed by your former friends");
 								restart = 0;
 							}
 						}
 						else if (rng4 == 3 || rng4 == 4) {
 							if(hide == 1) {
 								c.clear();
-								c.print("while hiding in the barrel, it gets thrown overboard\nyou die a cowards death by drowning.");
+								c.print("while hiding in the barrel, it gets thrown overboard\n");
+								c.setTextColour(Color.RED);
+								c.print("you die a cowards death by drowning.");
 								restart = 0;
 							}
 							else if (yourSide > otherSide) {
 								c.clear();
-
+								c.setTextColour(Color.RED);
 								c.print("you die in battle fighting alougside your friends. ");
 								restart = 0;
-
-								c.print("you die in battle fighting alongside your friends. ");
 							}
 							else {
 								c.clear();
-								c.print("You betray your crew and live.\nBut when the other crew finds out you're killed");
+								c.print("You betray your crew and live.\nBut when the other crew finds out,");
+								c.setTextColour(Color.RED);
+								c.print("you're killed.");
 								restart = 0;
 							}
 						}
 						else {
 							c.clear();
+							c.setTextColour(Color.RED);
 							c.print("The ships powder magazine explodes killing everyone");
 							restart = 0;
 						}
 					}
 
 				}
+			}
 				else if (input1.equalsIgnoreCase("no")) {
 					c.clear();
 					input1 = "no";
@@ -178,37 +191,16 @@ public class Pyritz {
 						}
 					}
 					c.clear();
-					c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
+					c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \n");
+					c.setTextColour(Color.RED);
+					c.print("All because of you. \nShame.");
 					restart = 0;
 
 				}
 
 			}
-			else if (input1.equalsIgnoreCase("no")) {
-				c.clear();
-				input1 = "no";
-				int scream = 0;
-				int cry = 0;
-				c.print("You were abducted by allens, what do you do? \n");
-				while (scream < 1 || cry < 1) {
-					c.print("(Scream or cry) \n");
-					String input3 = c.readString();
-					if (input3.equalsIgnoreCase("scream")) {
-						c.clear();
-						c.print("The allens appear annoyed with your screaming... \n");
-						scream =+ 1;
-					}
-					else if (input3.equalsIgnoreCase("cry")) {
-						c.clear();
-						c.print("The allens watch as you continue to cry your eyes out. \n");
-						cry =+ 1;
-					}
-				}
-				c.clear();
-				c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
-				restart = 0;
-			}
 			restart = 0;
+			c.setTextColour(Color.WHITE);
 			c.print("\nwould you like to play again?\n(Yes or No)\n ");
 			String input7 = c.readString();
 			if(input7.equalsIgnoreCase("yes")) {
@@ -216,12 +208,12 @@ public class Pyritz {
 			}
 			else if (input7.equalsIgnoreCase("no")) {
 				c.clear();
+				c.setTextColour(Color.CYAN);
 				c.print("Thank you for playing!");
-				break;
 			}
 		}
 	}
-}
+
 
 
 
