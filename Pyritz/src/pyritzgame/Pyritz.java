@@ -213,7 +213,6 @@ public class Pyritz {
 			String input7 = c.readString();
 			if(input7.equalsIgnoreCase("yes")) {
 				restart = 1;
-
 			}
 		}
 	}
