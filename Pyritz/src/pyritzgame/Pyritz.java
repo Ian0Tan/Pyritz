@@ -32,7 +32,6 @@ public class Pyritz {
 				if(input2.equalsIgnoreCase("yes")) {
 					c.clear();
 					c.print("You drink it all and die in a bar fight.");
-					break;
 				}
 				else if(input2.equalsIgnoreCase("no")) {
 					c.clear();
@@ -44,19 +43,17 @@ public class Pyritz {
 						if (rng1 == 2.0) {
 							c.clear();
 							c.print("You fall from the rigging and die.\nDon't drink and climb.");
-							break;
 						}
 						else {
 							c.clear();
 							c.print("You climb the rigging and see another ship.\nYou inform the crew and start getting ready.\n");
-							c.print("Do you help load the cannons? (Yes or No)\n");
+							c.print("Do you help load the cannons?\n(Yes or No)\n");
 							String input5 = c.readString();
 							if(input5.equalsIgnoreCase("yes")) {
 								double rng2 = Math.round(Math.random() * 3);
 								if (rng2 == 2.0) {
 									c.clear();
 									c.print("The cannon goes off while loading.\nYou die instantly, your entire bloodline is disappointed.");
-									break;
 								}
 								else {
 									c.clear();
@@ -67,11 +64,9 @@ public class Pyritz {
 								double rng3 = Math.round(Math.random() * 2);
 								if (rng3 == 2.0) {
 									c.print("You weren't paying attention and got hit by an enemy cannon ball.\nYou die instantly.\nCannon ball: 1 - You: 0");
-									break;
 								}
 								else {
 									c.print("You win the fight but from doing nothing you have to swab the deck forever.\nDo you really win?");
-									break;
 								}
 							}
 						}
@@ -144,38 +139,39 @@ public class Pyritz {
 							c.print("The ships powder magazine explodes killing everyone");
 						}
 					}
-				
+					else if (input1.equalsIgnoreCase("no")) {
+						c.clear();
+						input1 = "no";
+						int scream = 0;
+						int cry = 0;
+						c.print("You were abducted by allens, what do you do? \n");
+						while (scream < 1 || cry < 1) {
+							c.print("(Scream or cry) \n");
+							String input3 = c.readString();
+							if (input3.equalsIgnoreCase("scream")) {
+								c.clear();
+								c.print("The allens appear annoyed with your screaming... \n");
+								scream =+ 1;
+							}
+							else if (input3.equalsIgnoreCase("cry")) {
+								c.clear();
+								c.print("The allens watch as you continue to cry your eyes out. \n");
+								cry =+ 1;
+							}
+						}
+						c.clear();
+						c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
 
-				}
-				c.clear();
-				c.print("the oof-ening begins.");
-				break;
-			}
-			else if (input1.equalsIgnoreCase("no")) {
-				c.clear();
-				input1 = "no";
-				int scream = 0;
-				int cry = 0;
-					c.print("You were abducted by allens, what do you do? \n");
-					while (scream < 1 || cry < 1) {
-						c.print("(Scream or cry) \n");
-						String input3 = c.readString();
-						if (input3.equalsIgnoreCase("scream")) {
-							c.clear();
-							c.print("The allens appear annoyed with your screaming... \n");
-							scream =+ 1;
-						}
-						else if (input3.equalsIgnoreCase("cry")) {
-							c.clear();
-							c.print("The allens watch as you continue to cry your eyes out. \n");
-							cry =+ 1;
-						}
 					}
-					c.clear();
-					c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
-					break;
 
 				}
+				restart = 0;
+				c.print("\nwould you like to play again?\n(Yes or No)\n ");
+				String input7 = c.readString();
+				if(input7.equalsIgnoreCase("yes")) {
+					restart = 1;
+				}
+			}
 		}
 	}
 }
