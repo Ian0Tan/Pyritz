@@ -170,49 +170,49 @@ public class Pyritz {
 
 				}
 			}
-				else if (input1.equalsIgnoreCase("no")) {
-					c.clear();
-					input1 = "no";
-					int scream = 0;
-					int cry = 0;
-					c.print("You were abducted by allens, what do you do? \n");
-					while (scream < 1 || cry < 1) {
-						c.print("(Scream or cry) \n");
-						String input3 = c.readString();
-						if (input3.equalsIgnoreCase("scream")) {
-							c.clear();
-							c.print("The allens appear annoyed with your screaming... \n");
-							scream =+ 1;
-						}
-						else if (input3.equalsIgnoreCase("cry")) {
-							c.clear();
-							c.print("The allens watch as you continue to cry your eyes out. \n");
-							cry =+ 1;
-						}
-					}
-					c.clear();
-					c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \n");
-					c.setTextColour(Color.RED);
-					c.print("All because of you. \nShame.");
-					restart = 0;
-
-				}
-
-			}
-			restart = 0;
-			c.setTextColour(Color.WHITE);
-			c.print("\nwould you like to play again?\n(Yes or No)\n ");
-			String input7 = c.readString();
-			if(input7.equalsIgnoreCase("yes")) {
-				restart = 1;
-			}
-			else if (input7.equalsIgnoreCase("no")) {
+			else if (input1.equalsIgnoreCase("no")) {
 				c.clear();
-				c.setTextColour(Color.CYAN);
-				c.print("Thank you for playing!");
+				input1 = "no";
+				int scream = 0;
+				int cry = 0;
+				c.print("You were abducted by allens, what do you do? \n");
+				while (scream < 1 || cry < 1) {
+					c.print("(Scream or cry) \n");
+					String input3 = c.readString();
+					if (input3.equalsIgnoreCase("scream")) {
+						c.clear();
+						c.print("The allens appear annoyed with your screaming... \n");
+						scream =+ 1;
+					}
+					else if (input3.equalsIgnoreCase("cry")) {
+						c.clear();
+						c.print("The allens watch as you continue to cry your eyes out. \n");
+						cry =+ 1;
+					}
+				}
+				c.clear();
+				c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \n");
+				c.setTextColour(Color.RED);
+				c.print("All because of you. \nShame.");
+				restart = 0;
+
 			}
+
+		}
+		restart = 0;
+		c.setTextColour(Color.WHITE);
+		c.print("\nwould you like to play again?\n(Yes or No)\n ");
+		String input7 = c.readString();
+		if(input7.equalsIgnoreCase("yes")) {
+			restart = 1;
+		}
+		else if (input7.equalsIgnoreCase("no")) {
+			c.clear();
+			c.setTextColour(Color.CYAN);
+			c.print("Thank you for playing!");
 		}
 	}
+}
 
 
 
