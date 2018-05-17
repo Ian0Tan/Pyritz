@@ -127,7 +127,7 @@ public class Pyritz {
 							}
 							else if (yourSide > otherSide) {
 								c.clear();
-								c.print("you die in battle fighting alougside your friends. ");
+								c.print("you die in battle fighting alongside your friends. ");
 							}
 							else {
 								c.clear();
@@ -143,12 +143,7 @@ public class Pyritz {
 					
 
 				}
-				restart = 0;
-				c.print("\nwould you like to play again?\n(Yes or No)\n ");
-				String input7 = c.readString();
-				if(input7.equalsIgnoreCase("yes")) {
-					restart = 1;
-				}
+				
 			}
 			else if (input1.equalsIgnoreCase("no")) {
 				c.clear();
@@ -172,8 +167,14 @@ public class Pyritz {
 				}
 				c.clear();
 				c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
-
+				restart = 0;
 			}
+		}
+		restart = 0;
+		c.print("\nwould you like to play again?\n(Yes or No)\n ");
+		String input7 = c.readString();
+		if(input7.equalsIgnoreCase("yes")) {
+			restart = 1;
 		}
 	}
 }
