@@ -32,6 +32,7 @@ public class Pyritz {
 				if(input2.equalsIgnoreCase("yes")) {
 					c.clear();
 					c.print("You drink it all and die in a bar fight.");
+					restart = 0;
 				}
 				else if(input2.equalsIgnoreCase("no")) {
 					c.clear();
@@ -43,6 +44,7 @@ public class Pyritz {
 						if (rng1 == 2.0) {
 							c.clear();
 							c.print("You fall from the rigging and die.\nDon't drink and climb.");
+							restart = 0;
 						}
 						else {
 							c.clear();
@@ -54,19 +56,23 @@ public class Pyritz {
 								if (rng2 == 2.0) {
 									c.clear();
 									c.print("The cannon goes off while loading.\nYou die instantly, your entire bloodline is disappointed.");
+									restart = 0;
 								}
 								else {
 									c.clear();
 									c.print("You load the cannons and defeat the enemy ship.\nYou win!");
+									restart = 0;
 								}
 							}
 							else if (input5.equalsIgnoreCase("no")) {
 								double rng3 = Math.round(Math.random() * 2);
 								if (rng3 == 2.0) {
 									c.print("You weren't paying attention and got hit by an enemy cannon ball.\nYou die instantly.\nCannon ball: 1 - You: 0");
+									restart = 0;
 								}
 								else {
 									c.print("You win the fight but from doing nothing you have to swab the deck forever.\nDo you really win?");
+									restart = 0;
 								}
 							}
 						}
@@ -110,44 +116,43 @@ public class Pyritz {
 							if(hide == 1) {
 								c.clear();
 								c.print("You're alive, but you have to scrub the poop deck forever.\nWin?");
+								restart = 0;
 							}
 							else if (yourSide > otherSide) {
 								c.clear();
 								c.print("You fight valiantly and live another day\nWin");
+								restart = 0;
 							}
 							else {
 								c.clear();
 								c.print("you suruived, but your betrayal is not tolerated.\nYou are killed by your former friends");
+								restart = 0;
 							}
 						}
 						else if (rng4 == 3 || rng4 == 4) {
 							if(hide == 1) {
 								c.clear();
 								c.print("while hiding in the barrel, it gets thrown overboard\nyou die a cowards death by drowning.");
+								restart = 0;
 							}
 							else if (yourSide > otherSide) {
 								c.clear();
 								c.print("you die in battle fighting alougside your friends. ");
+								restart = 0;
 							}
 							else {
 								c.clear();
 								c.print("You betray your crew and live.\nBut when the other crew finds out you're killed");
+								restart = 0;
 							}
 						}
 						else {
 							c.clear();
 							c.print("The ships powder magazine explodes killing everyone");
+							restart = 0;
 						}
 					}
-					
-					
-
-				}
-				restart = 0;
-				c.print("\nwould you like to play again?\n(Yes or No)\n ");
-				String input7 = c.readString();
-				if(input7.equalsIgnoreCase("yes")) {
-					restart = 1;
+				
 				}
 			}
 			else if (input1.equalsIgnoreCase("no")) {
@@ -172,8 +177,17 @@ public class Pyritz {
 				}
 				c.clear();
 				c.print("The allens are fed up with you being loud and decide the best option is to wipe out humanity. \nAll because of you. \nShame.");
+				restart = 0;
 
 			}
+			restart = 0;
+			c.print("\nwould you like to play again?\n(Yes or No)\n ");
+			String input7 = c.readString();
+			if(input7.equalsIgnoreCase("yes")) {
+				restart = 1;
+		}
+		
 		}
 	}
+	
 }
