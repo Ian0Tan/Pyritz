@@ -113,7 +113,6 @@ public class Pyritz {
 								fightCount =+1;
 							}
 							else if (input6.equalsIgnoreCase("hide")) {
-
 								hide =+ 1;
 								fightCount = 3;
 							}
@@ -167,7 +166,6 @@ public class Pyritz {
 							restart = 0;
 						}
 					}
-
 				}
 			}
 			else if (input1.equalsIgnoreCase("no")) {
@@ -195,9 +193,7 @@ public class Pyritz {
 				c.setTextColour(Color.RED);
 				c.print("All because of you. \nShame.");
 				restart = 0;
-
 			}
-
 		}
 		restart = 0;
 		c.setTextColour(Color.WHITE);
