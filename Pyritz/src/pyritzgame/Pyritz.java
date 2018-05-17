@@ -139,6 +139,7 @@ public class Pyritz {
 							c.print("The ships powder magazine explodes killing everyone");
 						}
 					}
+					
 					else if (input1.equalsIgnoreCase("no")) {
 						c.clear();
 						input1 = "no";
