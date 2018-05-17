@@ -214,6 +214,11 @@ public class Pyritz {
 			if(input7.equalsIgnoreCase("yes")) {
 				restart = 1;
 			}
+			else if (input7.equalsIgnoreCase("no")) {
+				c.clear();
+				c.print("Thank you for playing!");
+				break;
+			}
 		}
 	}
 }
