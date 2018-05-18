@@ -194,22 +194,18 @@ public class Pyritz {
 				c.print("All because of you. \nShame.");
 				restart = 0;
 			}
+			restart = 0;
+			c.setTextColour(Color.WHITE);
+			c.print("\nwould you like to play again?\n(Yes or No)\n ");
+			String input7 = c.readString();
+			if(input7.equalsIgnoreCase("yes")) {
+				restart = 1;
+			}
+			else if (input7.equalsIgnoreCase("no")) {
+				c.clear();
+				c.setTextColour(Color.CYAN);
+				c.print("Thank you for playing!");
 		}
-		restart = 0;
-		c.setTextColour(Color.WHITE);
-		c.print("\nwould you like to play again?\n(Yes or No)\n ");
-		String input7 = c.readString();
-		if(input7.equalsIgnoreCase("yes")) {
-			restart = 1;
-		}
-		else if (input7.equalsIgnoreCase("no")) {
-			c.clear();
-			c.setTextColour(Color.CYAN);
-			c.print("Thank you for playing!");
-		}
+				}
 	}
 }
-
-
-
-
