@@ -1,13 +1,19 @@
 package pyritzgame;
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import hsa_new.Console;
 
 public class Pyritz {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Console c = new Console( 30,100,20,"Pyritz");
-
+		BufferedImage allen  = ImageIO.read(new File ("allen.jpg"));
 		int restart = 0;
 		//start
 		c.print("					Pyritz: The Game\n");
@@ -184,6 +190,7 @@ public class Pyritz {
 				c.print("You were abducted by allens, what do you do? \n");
 				while (scream < 1 || cry < 1) {
 					c.print("(Scream or cry) \n");
+					c.drawImage(allen, 0, 85, null);
 					String input3 = c.readString();
 					if (input3.equalsIgnoreCase("scream")) {
 						c.clear();
