@@ -9,6 +9,7 @@ public class Pyritz {
 		Console c = new Console( 30,100,20,"Pyritz");
 
 		int restart = 0;
+		//start
 		c.print("					Pyritz: The Game\n");
 		c.setTextColor(Color.WHITE);
 		c.print("				___");
@@ -21,6 +22,7 @@ public class Pyritz {
 		if (start.equalsIgnoreCase("start")) {
 			restart = 1;
 		}
+		//intro
 		while (restart == 1){
 			c.clear();
 			c.fillRect (0, 0, 1500, 1500);
@@ -51,6 +53,7 @@ public class Pyritz {
 							c.print("You fall from the rigging and die.\nDon't drink and climb.");
 							restart = 0;
 						}
+						//cannon battle
 						else {
 							c.clear();
 							c.print("You climb the rigging and see another ship.\nYou inform the crew and start getting ready.\n");
@@ -84,6 +87,7 @@ public class Pyritz {
 							}
 						}
 					}
+					//fighting rival pyritz
 					else if (input4.equalsIgnoreCase("no")) {
 						c.clear();
 						c.print("You're forced to scrub the deck as punishment.\n");
@@ -117,6 +121,7 @@ public class Pyritz {
 								fightCount = 3;
 							}
 						}
+						//your side wins
 						double rng4 = Math.round(Math.random() * 2);
 						if (rng4 == 1 || rng4 == 6) {
 							if(hide == 1) {
@@ -137,6 +142,7 @@ public class Pyritz {
 								restart = 0;
 							}
 						}
+						//other side wins
 						else if (rng4 == 3 || rng4 == 4) {
 							if(hide == 1) {
 								c.clear();
@@ -160,6 +166,7 @@ public class Pyritz {
 							}
 						}
 						else {
+							//boom
 							c.clear();
 							c.setTextColour(Color.RED);
 							c.print("The ships powder magazine explodes killing everyone");
@@ -168,6 +175,7 @@ public class Pyritz {
 					}
 				}
 			}
+			// the allens of doom
 			else if (input1.equalsIgnoreCase("no")) {
 				c.clear();
 				input1 = "no";
@@ -194,6 +202,7 @@ public class Pyritz {
 				c.print("All because of you. \nShame.");
 				restart = 0;
 			}
+			//restart
 			restart = 0;
 			c.setTextColour(Color.WHITE);
 			c.print("\nwould you like to play again?\n(Yes or No)\n ");
@@ -205,7 +214,7 @@ public class Pyritz {
 				c.clear();
 				c.setTextColour(Color.CYAN);
 				c.print("Thank you for playing!");
+			}
 		}
-				}
 	}
 }
